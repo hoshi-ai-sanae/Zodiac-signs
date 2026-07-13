@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090825" />
+  <meta name="description" content="十二星座の扉を巡り、星座と宝石の力を受け取るミニゲーム。" />
+  <link rel="canonical" href="https://hoshi-ai-sanae.github.io/Zodiac-signs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="十二星座の扉" />
+  <meta property="og:title" content="十二星座の扉｜星座と宝石のミニゲーム" />
+  <meta property="og:description" content="今のあなたに必要な星座を選び、星座と宝石の力を受け取ろう。" />
+  <meta property="og:url" content="https://hoshi-ai-sanae.github.io/Zodiac-signs/" />
+  <meta property="og:image" content="https://hoshi-ai-sanae.github.io/Zodiac-signs/assets/hero.png" />
+  <meta property="og:image:alt" content="星座の扉を巡る主人公" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="十二星座の扉｜星座と宝石のミニゲーム" />
+  <meta name="twitter:description" content="星座を選び、星座と宝石の力を受け取るミニゲーム。" />
+  <meta name="twitter:image" content="https://hoshi-ai-sanae.github.io/Zodiac-signs/assets/hero.png" />
+  <title>星巡りの宝石盤</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">ZODIAC GEM ADVENTURE</p>
+      <h1>星巡りの宝石盤</h1>
+    </div>
+    <div class="progress-wrap" aria-label="ゲーム進行度">
+      <span id="progressText">今日の星の導き</span>
+      <div class="progress"><i id="progressBar"></i></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-panel">
+      <div class="hero-image-wrap">
+        <img src="assets/hero.png" alt="星座の扉を巡る主人公の女の子" />
+      </div>
+      <div class="story">
+        <p class="chapter">YOUR STARS, YOUR MOMENT</p>
+        <h2>今のあなたに必要な星座を選んでください。</h2>
+        <p id="storyText">心に浮かぶ悩みや願いに耳を澄ませて。十二星座の守り人が、今のあなたへ言葉と宝石の力を届けます。</p>
+        <button id="nextDoorButton" class="primary">星座を選ぶ</button>
+      </div>
+    </section>
+
+    <section class="game-grid">
+      <div class="doors-panel panel">
+        <div class="section-heading">
+          <div>
+            <p class="chapter">TWELVE GATES</p>
+            <h2>十二星座の扉</h2>
+          </div>
+          <button id="resetButton" class="ghost">受け取った力をリセット</button>
+        </div>
+        <div id="doors" class="doors"></div>
+      </div>
+
+      <aside class="disc-panel panel heart-panel">
+        <p class="chapter">POWER IN YOUR HEART</p>
+        <h2>心に宿った星の力</h2>
+        <div class="heart-orbit"><div id="heartCrystal" class="heart-crystal">♡</div></div>
+        <p class="received-sign" id="discMessage">まだ星の力を受け取っていません</p>
+        <div id="recentPowers" class="recent-powers"></div>
+      </aside>
+    </section>
+  </main>
+
+  <section class="picture-book-section" aria-labelledby="pictureBookTitle">
+    <div class="picture-book-heading">
+      <p class="chapter">AFTER THE GAME</p>
+      <h2 id="pictureBookTitle">星座のゲームをした後に、もっとその星座の力を知りたい人は</h2>
+      <p>私の絵本で、それぞれの星座が持つ物語と力をさらに感じてみてください。</p>
+    </div>
+    <div class="picture-book-grid">
+      <a class="picture-book-card" href="https://amzn.asia/d/0b8Mme99" target="_blank" rel="noopener noreferrer">
+        <img class="picture-book-cover" src="assets/books/aries.jpg" alt="牡羊座の絵本『星の学園リリス』">
+        <span class="picture-book-name">牡羊座</span>
+        <span class="picture-book-link">Amazonで見る ↗</span>
+      </a>
+      <a class="picture-book-card" href="https://amzn.asia/d/04dn8ZKC" target="_blank" rel="noopener noreferrer">
+        <img class="picture-book-cover" src="assets/books/taurus.jpg" alt="牡牛座の絵本『星の学園リリス』">
+        <span class="picture-book-name">牡牛座</span>
+        <span class="picture-book-link">Amazonで見る ↗</span>
+      </a>
+      <a class="picture-book-card" href="https://amzn.asia/d/09O4YJwS" target="_blank" rel="noopener noreferrer">
+        <img class="picture-book-cover" src="assets/books/gemini.jpg" alt="双子座の絵本『星の学園リリス』">
+        <span class="picture-book-name">双子座</span>
+        <span class="picture-book-link">Amazonで見る ↗</span>
+      </a>
+      <a class="picture-book-card" href="https://amzn.asia/d/03l0Sxuz" target="_blank" rel="noopener noreferrer">
+        <img class="picture-book-cover" src="assets/books/cancer.jpg" alt="蟹座の絵本『星の学園リリス』">
+        <span class="picture-book-name">蟹座</span>
+        <span class="picture-book-link">Amazonで見る ↗</span>
+      </a>
+    </div>
+    <p class="picture-book-coming">現在は蟹座まで。獅子座以降はこれから出版予定です。現在執筆中です。お楽しみにしてください。</p>
+  </section>
+
+  <dialog id="challengeDialog">
+    <div class="dialog-glow"></div>
+    <button class="dialog-close" id="closeDialog" aria-label="閉じる">×</button>
+    <button id="backToZodiacButton" class="ghost back-to-zodiac" type="button">12星座に戻る</button>
+    <div id="challengeIcon" class="challenge-icon"></div>
+    <p id="challengeKicker" class="chapter"></p>
+    <h2 id="challengeTitle"></h2>
+    <div class="guardian-card">
+      <img id="guardianImage" src="" alt="" />
+      <div><small>STAR GUARDIAN</small><strong id="guardianName"></strong></div>
+    </div>
+    <p id="challengeStory" class="challenge-story"></p>
+    <div id="gateOpening" class="gate-opening" aria-hidden="true">
+      <div class="gate-half gate-left"></div><div class="gate-half gate-right"></div>
+      <span>星の扉が開く</span>
+    </div>
+    <div id="challengeBody" class="challenge-body action-targets"></div>
+    <div class="archer-stage" aria-hidden="true">
+      <div class="archer-portrait"><img src="assets/game-hero.png" alt="" /></div>
+      <svg class="real-bow" viewBox="0 0 100 160" aria-hidden="true">
+        <path class="bow-limb" d="M77 7 C25 42 25 118 77 153" />
+        <path class="bow-string" d="M77 7 L52 80 L77 153" />
+        <path class="bow-grip" d="M47 67 L57 67 L57 93 L47 93 Z" />
+      </svg>
+      <div id="flyingArrow" class="flying-arrow"></div>
+      <span class="aim-guide">星を選ぶと、矢を放ちます</span>
+    </div>
+    <p id="feedback" class="feedback" aria-live="polite"></p>
+  </dialog>
+
+  <div id="reward" class="reward" aria-live="assertive">
+    <div class="heart-reception">
+      <img src="assets/game-hero.png" alt="星の力を受け取る主人公" />
+      <div class="girl-heart">♥</div>
+      <div id="rewardGem" class="reward-gem"></div>
+    </div>
+    <p id="rewardLead">星座とストーンのパワーを受け取った</p>
+    <h2 id="rewardName"></h2>
+    <div class="star-message"><span id="rewardFrom"></span><q id="rewardMessage"></q></div>
+    <div id="rewardBookRecommendation" class="reward-book-recommendation" hidden></div>
+    <button id="rewardClose" class="primary reward-close" type="button">終了する</button>
+  </div>
+
+  <div id="meteorShower" class="meteor-shower" aria-hidden="true"></div>
+
+  <div id="ending" class="ending" role="dialog" aria-modal="true" aria-labelledby="endingTitle">
+    <div class="ending-card">
+      <p class="chapter">THE CONSTELLATIONS AWAKEN</p>
+      <h2 id="endingTitle">十二の星が、再び輝きだした。</h2>
+      <p>すべての宝石が円盤に戻り、星空に光がよみがえりました。</p>
+      <blockquote>あなたが選んだ一つ一つの答えと、踏み出した十二の一歩は、これからもあなたの中で輝き続けます。迷う夜には空を見上げてください。十二の星と私たちは、いつでもあなたの旅を見守っています。</blockquote>
+      <p class="ending-sign">— 十二星座の守り人より、祝福をこめて —</p>
+      <button id="endingClose" class="primary">星空を眺める</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
