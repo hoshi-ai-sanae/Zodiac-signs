@@ -167,7 +167,7 @@ dialog::backdrop { background:rgba(2,2,17,.76); backdrop-filter:blur(7px); }
 .receiving-choice small { color:#9e96b6; }
 .heart-reception { height:190px; position:relative; margin:-25px auto 10px; }
 .heart-reception img { height:100%; width:170px; object-fit:contain; background:white; border-radius:50% 50% 18px 18px; }
-.girl-heart { position:absolute; left:50%; top:43%; transform:translate(-50%,-50%); color:#ff8fab; font-size:1.5rem; opacity:.55; text-shadow:0 0 9px #ff6f9c; }
+.girl-heart { position:absolute; left:50%; top:32%; transform:translate(-50%,-50%); color:#ff8fab; font-size:1.5rem; opacity:.55; text-shadow:0 0 9px #ff6f9c; }
 .heart-reception .reward-gem { position:absolute; left:calc(100% - 58px); top:55px; width:42px; height:54px; margin:0; transform:rotate(45deg); transition:1.25s cubic-bezier(.2,.8,.3,1); }
 .reward.heart-filled .heart-reception .reward-gem { left:calc(50% - 20px); top:70px; transform:rotate(405deg) scale(.2); opacity:0; }
 .reward.heart-filled .girl-heart { animation:heartBlessing 1.4s .75s both; }
@@ -177,14 +177,14 @@ dialog::backdrop { background:rgba(2,2,17,.76); backdrop-filter:blur(7px); }
 .action-targets { grid-template-columns:repeat(3,1fr); min-height:160px; }
 .action-targets>strong { grid-column:1/-1; }
 .archer-stage { display:block; }
-.real-bow { position:absolute; left:118px; bottom:7px; width:92px; height:150px; overflow:visible; filter:drop-shadow(0 0 6px #e6be72); transform:rotate(-7deg); }
+.real-bow { position:absolute; left:18px; bottom:7px; width:92px; height:150px; overflow:visible; visibility:hidden; filter:drop-shadow(0 0 6px #e6be72); transform:rotate(-7deg); }
 .bow-limb { fill:none; stroke:url(#none); stroke:#d39a3a; stroke-width:10; stroke-linecap:round; }
 .bow-string { fill:none; stroke:#f8e9c7; stroke-width:1.8; }
 .bow-grip { fill:#683d25; stroke:#e6be72; stroke-width:2; }
-.aim-guide { position:absolute; left:220px; bottom:55px; color:#aaa1bf; font-size:.72rem; letter-spacing:.08em; }
+.aim-guide { display:none; position:absolute; left:120px; bottom:55px; color:#aaa1bf; font-size:.72rem; letter-spacing:.08em; }
 .flying-arrow { width:105px; height:5px; background:linear-gradient(90deg,#734a2b,#f6d985); border-radius:4px; }
 .flying-arrow::after { right:-14px; top:-6px; border-left:15px solid #d7b563; border-top:8px solid transparent; border-bottom:8px solid transparent; }
 .flying-arrow::before { left:-12px; top:-6px; border-right:16px solid #bb78d6; border-top:8px solid transparent; border-bottom:8px solid transparent; }
-@media(max-width:650px){.real-bow{left:104px;width:78px}.aim-guide{left:185px;bottom:48px;font-size:.62rem}.action-targets{min-height:140px}}
+@media(max-width:650px){.real-bow{left:4px;width:78px}.aim-guide{left:85px;bottom:48px;font-size:.62rem}.action-targets{min-height:140px}}
 @media (max-width:950px) { .game-grid{grid-template-columns:1fr}.doors{grid-template-columns:repeat(3,1fr)}.disc-panel{order:-1}.disc{width:320px}.hero-panel{grid-template-columns:42% 1fr}.story{padding:45px 28px 40px 5px} }
 @media (max-width:650px) { .topbar,main{padding-left:17px;padding-right:17px}.topbar{align-items:center}.progress{width:110px}.hero-panel{grid-template-columns:1fr;min-height:620px}.hero-image-wrap{min-height:310px}.hero-image-wrap::after{background:linear-gradient(0deg,#110c33,transparent 55%)}.story{padding:10px 24px 34px}.story h2{font-size:1.7rem}.story>p:not(.chapter){line-height:1.8}.doors{grid-template-columns:repeat(2,1fr)}.panel{padding:22px 16px}.door{min-height:168px}.door-image{height:96px}.disc{width:min(100%,310px)}.disc-slot{transform:rotate(var(--angle)) translateY(-118px) rotate(calc(-1 * var(--angle)))}dialog{padding:26px 15px 28px}.guardian-card{height:120px}.challenge-body{gap:7px}.answer{font-size:.66rem;padding:27px 10px}.archer-stage{height:155px;margin:10px 0 0}.archer-portrait{width:108px;height:143px;left:2px}.bow{left:101px;bottom:36px}.ending-card{padding:45px 25px} }
