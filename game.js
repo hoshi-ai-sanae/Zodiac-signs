@@ -19,7 +19,10 @@ let history = JSON.parse(localStorage.getItem('zodiacPowerHistory') || '[]');
 let activeSign = null;
 let activeSignIndex = -1;
 const pictureBooks = {
-  牡羊座: 'https://amzn.asia/d/0b8Mme99'
+  牡羊座: 'https://amzn.asia/d/0b8Mme99',
+  牡牛座: 'https://amzn.asia/d/04dn8ZKC',
+  双子座: 'https://amzn.asia/d/09O4YJwS',
+  蟹座: 'https://amzn.asia/d/03l0Sxuz'
 };
 const actionSets = [
   ['5分だけ始めてみる','今日やることを一つ決める','誰かに宣言して一歩踏み出す'],
@@ -152,8 +155,9 @@ function receivePower(action,actionIndex){
   $('#rewardName').textContent=`${z.gem} — ${z.name}`; $('#rewardFrom').textContent=`あなたの中に${z.gem}の力が入りました。${z.name}の守り人から、今のあなたへ`;
   $('#rewardMessage').textContent=message;
   const rewardBook = $('#rewardBookRecommendation');
-  if (z === zodiac[0]) {
-    rewardBook.innerHTML = `<p class="reward-book-kicker">もっと牡羊座の力を知りたい方へ</p><a href="${pictureBooks.牡羊座}" target="_blank" rel="noopener noreferrer">牡羊座の絵本を見る ↗</a>`;
+  const pictureBookUrl = pictureBooks[z.name];
+  if (pictureBookUrl) {
+    rewardBook.innerHTML = `<p class="reward-book-kicker">もっと${z.name}の力を知りたい方へ</p><a href="${pictureBookUrl}" target="_blank" rel="noopener noreferrer">${z.name}の絵本を見る ↗</a>`;
     rewardBook.hidden = false;
   } else {
     rewardBook.hidden = true;
