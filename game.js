@@ -41,7 +41,7 @@ function render() {
   zodiac.forEach((z,i) => {
     const b=document.createElement('button');
     b.className='door current'; b.style.setProperty('--gem',z.color);
-    b.innerHTML=`<img class="door-image" src="assets/${z.image}" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
+    b.innerHTML=`<img class="door-image" src="assets/${z.image}?v=20260713" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
     b.onclick=()=>openSign(i); doors.appendChild(b);
   });
   const latest=history[0];
@@ -95,7 +95,7 @@ function renderStable(){
     const b = document.createElement('button');
     b.className = 'door current';
     b.style.setProperty('--gem', z.color);
-    b.innerHTML = `<img class="door-image" src="assets/${z.image}" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
+    b.innerHTML = `<img class="door-image" src="assets/${z.image}?v=20260713" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
     b.onclick = () => openSign(i);
     doors.appendChild(b);
   });
@@ -116,7 +116,7 @@ function openSign(i){
   $('#challengeIcon').textContent=z.symbol;
   $('#challengeKicker').textContent=`${z.gem.toUpperCase()}・${z.title}`;
   $('#challengeTitle').textContent=`${z.name}「${z.title}」`;
-  $('#guardianImage').src=`assets/${z.image}`; $('#guardianImage').alt=`${z.name}の守り人`;
+  $('#guardianImage').src=`assets/${z.image}?v=20260713`; $('#guardianImage').alt=`${z.name}の守り人`;
   $('#guardianName').textContent=`${z.name}の星の守り人`;
   $('#challengeStory').textContent=`「${z.need}」と感じるあなたへ。今できそうな行動を一つ選び、星の的へ矢を放ってください。`;
   $('#feedback').textContent='';
