@@ -1,8 +1,8 @@
 const zodiac = [
-  {name:'牡羊座',symbol:'♈',gem:'ルビー',color:'#ff4b55',image:'butler-01.png',title:'勇気と始まり',need:'一歩踏み出す勇気がほしい',messages:['完璧な準備より、今日の小さな一歩を選んで。道は歩き始めた人の前に現れます。','怖さを感じるのは、本気で進もうとしている証。あなたの中の炎はもう目覚めています。','誰かの許可を待たなくて大丈夫。あなたが決めた瞬間、新しい物語は始まります。']},
-  {name:'牡牛座',symbol:'♉',gem:'エメラルド',color:'#42dc8c',image:'butler-02.png',title:'安心と豊かさ',need:'心を落ち着かせたい',messages:['急がなくても大丈夫。深く根を張る時間も、成長の大切な一部です。','心地よいものを一つ選び、自分に与えてください。自分を満たすことは、わがままではありません。','あなたがすでに持っている豊かさを数えてみて。安心はそこから静かに広がります。']},
-  {name:'双子座',symbol:'♊',gem:'シトリン',color:'#ffd44f',image:'butler-03.png',title:'言葉と好奇心',need:'気持ちを言葉にしたい',messages:['心の中の言葉を書き出してみて。答えは、言葉にしたとき輪郭を現します。','新しい会話が風向きを変えます。信頼できる人に、ほんの少し本音を話してみて。','一つに決められない自分も大切な自分。両方の声を、まずは聴いてあげてください。']},
-  {name:'蟹座',symbol:'♋',gem:'ムーンストーン',color:'#dff5ff',image:'butler-04.png',title:'癒やしと居場所',need:'優しさと安心がほしい',messages:['あなたが誰かに向けてきた優しさを、今日は自分自身へ向けてください。','休むことは立ち止まることではありません。月の光の中で、心をゆっくり満たして。','守れなかったことより、守ろうとした心を思い出して。あなたの優しさは消えていません。']},
+  {name:'牡羊座',symbol:'♈',gem:'ルビー',color:'#ff4b55',image:'butler-01.jpg',title:'勇気と始まり',need:'一歩踏み出す勇気がほしい',messages:['完璧な準備より、今日の小さな一歩を選んで。道は歩き始めた人の前に現れます。','怖さを感じるのは、本気で進もうとしている証。あなたの中の炎はもう目覚めています。','誰かの許可を待たなくて大丈夫。あなたが決めた瞬間、新しい物語は始まります。']},
+  {name:'牡牛座',symbol:'♉',gem:'エメラルド',color:'#42dc8c',image:'butler-02.jpg',title:'安心と豊かさ',need:'心を落ち着かせたい',messages:['急がなくても大丈夫。深く根を張る時間も、成長の大切な一部です。','心地よいものを一つ選び、自分に与えてください。自分を満たすことは、わがままではありません。','あなたがすでに持っている豊かさを数えてみて。安心はそこから静かに広がります。']},
+  {name:'双子座',symbol:'♊',gem:'シトリン',color:'#ffd44f',image:'butler-03.jpg',title:'言葉と好奇心',need:'気持ちを言葉にしたい',messages:['心の中の言葉を書き出してみて。答えは、言葉にしたとき輪郭を現します。','新しい会話が風向きを変えます。信頼できる人に、ほんの少し本音を話してみて。','一つに決められない自分も大切な自分。両方の声を、まずは聴いてあげてください。']},
+  {name:'蟹座',symbol:'♋',gem:'ムーンストーン',color:'#dff5ff',image:'butler-04.jpg',title:'癒やしと居場所',need:'優しさと安心がほしい',messages:['あなたが誰かに向けてきた優しさを、今日は自分自身へ向けてください。','休むことは立ち止まることではありません。月の光の中で、心をゆっくり満たして。','守れなかったことより、守ろうとした心を思い出して。あなたの優しさは消えていません。']},
   {name:'獅子座',symbol:'♌',gem:'サンストーン',color:'#ff9c42',image:'butler-05.png',title:'自信と輝き',need:'自分を信じたい',messages:['できたことを一つ、声に出して褒めてください。自信は小さな承認から育ちます。','あなたの光は、誰かと比べるためのものではありません。あなたらしく輝けばいいのです。','遠慮して隠してきた魅力を、今日は少しだけ表に出して。世界はその光を待っています。']},
   {name:'乙女座',symbol:'♍',gem:'サファイア',color:'#5f9cff',image:'butler-06.png',title:'整えと知恵',need:'混乱を整えたい',messages:['全部を一度に解決しなくて大丈夫。今できる一つだけを、丁寧に選びましょう。','あなたの細やかさは才能です。ただし、自分への採点は少し優しくして。','不要なものを一つ手放すと、本当に大切なもののための余白が生まれます。']},
   {name:'天秤座',symbol:'♎',gem:'オパール',color:'#f2a8ff',image:'butler-07.png',title:'調和と選択',need:'人間関係や選択に迷っている',messages:['相手を大切にするように、自分の本音も同じ重さで天秤に載せてください。','正解ではなく、心が穏やかになる選択を。あなたの感覚は答えを知っています。','すべての人に好かれなくても大丈夫。誠実な関係は、本当のあなたから始まります。']},
@@ -41,7 +41,7 @@ function render() {
   zodiac.forEach((z,i) => {
     const b=document.createElement('button');
     b.className='door current'; b.style.setProperty('--gem',z.color);
-    b.innerHTML=`<img class="door-image" src="assets/${z.image}?v=20260713" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
+    b.innerHTML=`<img class="door-image" src="assets/web/${z.image.replace('.png','.jpg')}?v=20260713" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
     b.onclick=()=>openSign(i); doors.appendChild(b);
   });
   const latest=history[0];
@@ -95,7 +95,7 @@ function renderStable(){
     const b = document.createElement('button');
     b.className = 'door current';
     b.style.setProperty('--gem', z.color);
-    b.innerHTML = `<img class="door-image" src="assets/${z.image}?v=20260713" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
+    b.innerHTML = `<img class="door-image" src="assets/web/${z.image.replace('.png','.jpg')}?v=20260713" alt="${z.name}の守り人" loading="lazy"><span class="door-symbol">${z.symbol}</span><span class="door-name">${z.need}</span><span class="door-gem">${z.name}の力へ</span>`;
     b.onclick = () => openSign(i);
     doors.appendChild(b);
   });
@@ -116,7 +116,7 @@ function openSign(i){
   $('#challengeIcon').textContent=z.symbol;
   $('#challengeKicker').textContent=`${z.gem.toUpperCase()}・${z.title}`;
   $('#challengeTitle').textContent=`${z.name}「${z.title}」`;
-  $('#guardianImage').src=`assets/${z.image}?v=20260713`; $('#guardianImage').alt=`${z.name}の守り人`;
+  $('#guardianImage').src=`assets/web/${z.image.replace('.png','.jpg')}?v=20260713`; $('#guardianImage').alt=`${z.name}の守り人`;
   $('#guardianName').textContent=`${z.name}の星の守り人`;
   $('#challengeStory').textContent=`「${z.need}」と感じるあなたへ。今できそうな行動を一つ選び、星の的へ矢を放ってください。`;
   $('#feedback').textContent='';
