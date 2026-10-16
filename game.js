@@ -23,7 +23,8 @@ const pictureBooks = {
   牡牛座: 'https://amzn.asia/d/04dn8ZKC',
   双子座: 'https://amzn.asia/d/09O4YJwS',
   蟹座: 'https://amzn.asia/d/03l0Sxuz',
-  獅子座: 'https://amzn.asia/d/0gzpgvC7'
+  獅子座: 'https://amzn.asia/d/0gzpgvC7',
+  乙女座: 'https://amzn.asia/d/04doqZa0'
 };
 const actionSets = [
   ['5分だけ始めてみる','今日やることを一つ決める','誰かに宣言して一歩踏み出す'],
